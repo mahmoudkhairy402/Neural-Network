@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1c1e20;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+.container {
+  height: 100vh;
+}
+.container .images {
+  flex: 1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+.container .images::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to bottom, #ccc 30%, #1c1e20 80%);
+}
+.container .images div {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.container .images div span {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(14, 165, 14, 0.616);
+}
+
+.container .images div span::after {
+  position: absolute;
+  content: "\f058";
+  font-family: "Font Awesome 5 Free"; /* replace with the font-family of the icon you want to use */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #fff;
+}
+#catspan,
+#dogspan,
+#eaglespan,
+#fishspan,
+#crocodilespan,
+#turtlespan {
+  display: none;
+}
+
+.container .images img {
+  max-width: 100%;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+.container .testBox {
+  flex: 1;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  background-color: #32373d;
+  height: 420px;
+  width: 370px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.card h1 {
+  text-transform: capitalize;
+}
+.card #image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 6px;
+  padding: 5px;
+  border: 3px double #fff;
+}
+.card img {
+  max-width: 100%;
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  text-transform: capitalize;
+  background-color: #e55958;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+label:hover {
+  background-color: #ff6d61;
+  letter-spacing: 1px;
+}
+
+.fa-upload {
+  margin-right: 5px;
+}
+label:hover i {
+  color: #0d4985a2;
+}
+
+.resulthere {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.resulthere span,
+.resulthere i {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+#result-container {
+  width: 300px;
+  height: 130px;
+  background-color: #32373d;
+  border-radius: 4px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #e0c6c6f8;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <!-- fontawesome icon library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Animate css library -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- fontawesome icon library CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- TENSORFLOW CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
+    <!-- MY MODEL -->
+    <script>
+      const MODEL_URL =
+        "https://teachablemachine.withgoogle.com/models/QPKFycXgR/";
+      async function loadModel() {
+        return await tf.loadLayersModel(MODEL_URL + "model.json");
+      }
+    </script>
+    <!--  -->
+    <title>Neural Network</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="images">
+        <div class="dog">
+          <img src="images/dog1.jpg" alt="" srcset="" />
+          <span id="dogspan"></span>
+        </div>
+        <div class="cat">
+          <img src="images/cat2.jpg" alt="" srcset="" />
+          <span id="catspan"></span>
+        </div>
+        <div class="eagle">
+          <img src="images/eagle2.jpg" alt="" srcset="" />
+          <span id="eaglespan"></span>
+        </div>
+        <div class="fish">
+          <img src="images/fish1.jpg" alt="" srcset="" />
+          <span id="fishspan"></span>
+        </div>
+        <div class="crocodile">
+          <img src="images/crocodile1.jpg" alt="" srcset="" />
+          <span id="crocodilespan"></span>
+        </div>
+        <div class="turtle">
+          <img src="images/turtle1.jpg" alt="" srcset="" />
+          <span id="turtlespan"></span>
+        </div>
+      </div>
+      <div class="testBox">
+        <div class="card">
+          <h1>Neural Network</h1>
+          <div id="image-container">
+            <img src="images/upload photo.png" alt="" id="photo" />
+          </div>
+          <input
+            type="file"
+            accept="image/jpeg,image/png,image/jpg"
+            id="inputfile"
+          />
+          <div class="labels">
+            <label for="inputfile">
+              <i class="fa-solid fa-upload"></i>upload photo</label
+            >
+          </div>
+        </div>
+        <div class="resulthere">
+          <span>RESULT WILL DISPLAY HERE</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <div id="result-container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="js/js.js"></script>
+  <style></style>
+</html>
